@@ -20,8 +20,8 @@ const UserStep1 = () => {
     
     
     return ( <div className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
-        <h1 className="text-3xl pl-3">Input Requirments</h1>
-        <p className={`text-lg pl-3 ${isError?'scale-105 text-red-700 font-medium':''}`}>Either enter calories required or protein required or both.</p>
+        <h1 className="text-3xl ">Input Requirments</h1>
+        <p className={`text-lg  ${isError?'scale-105 text-red-700 font-medium':''}`}>Either enter calories required or protein required or both.</p>
         <div className="mb-6">
     <label htmlFor="email" className="block mb-2 text-lg font-medium text-gray-900">Calories</label>
     <input value={calories>0?calories : "" } onChange={(e)=>{setCalories(Number(e.target.value) );setIsError(false)}} className="w-full max-w-96 border h-12 px-4 text-lg appearance-none" type="number"  placeholder="Enter"/>
