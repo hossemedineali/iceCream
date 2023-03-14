@@ -1,14 +1,5 @@
 import { create } from 'zustand'
 
-interface BearState {
-  step: number
-  setStep: (x: number) => void
-}
-
-export const useStepper = create<BearState>()((set) => ({
-  step: 1,
-  setStep: (x) => set((state) => ({ step: x })),
-}))
 
 
 interface USERSTEPS {
@@ -38,7 +29,7 @@ interface UserPreferances {
   size:number 
   setCalories: (x: number) => void
   setProtein: (x: number) => void
-  setSategorie: (x: string) => void
+  setCategorie: (x: string) => void
   setSize: (x: number) => void
 }
 
@@ -49,6 +40,6 @@ interface UserPreferances {
   size:0,
   setCalories: (x) => set(() => ({ calories: x })),
   setProtein: (x) => set(() => ({ protein: x })),
-  setSategorie: (x) => set(() => ({ categorie: x })),
+  setCategorie: (x) => set(() => ({ categorie: x })),
   setSize: (x) => set(() => ({ size: x })),
 })) 
