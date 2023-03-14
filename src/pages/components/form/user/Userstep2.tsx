@@ -16,7 +16,7 @@ const UserStep2 = () => {
   }
 
   
-  return <motion.div initial={{x:'100%'}} animate={{x:0}} transition={{duration:1}} className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
+  return <motion.div initial={{x:'100vw'}} animate={{x:0}} transition={{duration:1}} className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
   <h1 className="text-3xl ">Select Category</h1>
             <p className={`text-lg  `}>Please select a category.</p>
 
