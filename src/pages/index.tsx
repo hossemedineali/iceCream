@@ -7,6 +7,7 @@ import { api } from "~/utils/api";
 import InitialLogo from "./components/initialLogo";
 import {motion} from 'framer-motion'
 import { useEffect, useState } from "react";
+import FormWrapper from "./components/form/formWrapper";
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
@@ -36,8 +37,8 @@ const Home: NextPage = () => {
          <InitialLogo/>
         </motion.div>
 }
-        {!isLoading&&<div className="w-full max-w-md h-full min-h-screen mx-auto border-2 border-zinc-200 ">
-            
+        {!isLoading&&<div className="w-full max-w-md h-full min-h-screen mx-auto md:border-2 border-zinc-200 ">
+              <FormWrapper/>
         </div>}
 
       </main>
