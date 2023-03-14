@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { useState } from "react";
-import { useUserSteps } from "~/store/store";
+import { useQrCode, useUserSteps } from "~/store/store";
 const UserStep5 = () => {
 
     const [popup,setPopUp]=useState(false)
+    const {url}=useQrCode()
     const {setStep}=useUserSteps()
     return (<div  className=" gap-5 px-2 py-4 flex flex-col w-full h-screen relative">
         {popup&&<div className="absolute top-10 w-full h-96 bg-slate-200 rounded-3xl shadow-2xl flex items-center px-5">
@@ -12,11 +14,12 @@ const UserStep5 = () => {
     <h1 className="text-3xl pl-3 mx-auto">Your Results</h1>
               <p className={`text-lg pl-3 mx-auto `}>Show this to the counter.</p>
 
-              <div className="w-full max-w-xs max-h-64 mx-auto aspect-square border">
+              <div  className="w-full max-w-[220px] h-auto mx-auto aspect-square  relative">
 
+                    {url&&<Image src={url} alt='qrCode' width={220} height={25} className='w-[100%]  h-auto'/>}
               </div >
 
-              <div className="pl-3 flex flex-col gap-2">
+              <div className="pl-3 flex max-w-xs mx-auto w-full flex-col gap-2  ">
               <div className="w-full h-auto flex text-2xl ">
                 <p className="font-bold  w-20">Other  </p>
                 <p className="ml-5 font-extralight">Wahnut</p>
@@ -42,7 +45,7 @@ const UserStep5 = () => {
               </div>
 
               </div>
-              <button  onClick={()=>{setPopUp(true)}}   className=" h-12  max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed border rounded-md bg-black text-white mt-auto mb-4">Return</button>
+              <button  onClick={()=>{setPopUp(true)}}   className=" h-12  max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed  rounded-md bg-black text-white mt-auto mb-4">Return</button>
     </div> );
 }
  

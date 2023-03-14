@@ -3,13 +3,13 @@ import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
-import { api } from "~/utils/api";
+//import { api } from "~/utils/api";
 import InitialLogo from "./components/initialLogo";
 import {motion} from 'framer-motion'
 import { useEffect, useState } from "react";
 import FormWrapper from "./components/form/formWrapper";
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+//  const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   // to show the svg at initial render
   const [isLoading,setIsLoading]=useState(true)

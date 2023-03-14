@@ -43,3 +43,14 @@ interface UserPreferances {
   setCategorie: (x) => set(() => ({ categorie: x })),
   setSize: (x) => set(() => ({ size: x })),
 })) 
+
+
+interface QrCode{
+  url:string
+  setUrl:(x:string)=>void
+}
+
+export const useQrCode=create<QrCode>()((set)=>({
+  url:'',
+  setUrl:(x)=>set(()=>({url:x}))
+}))
