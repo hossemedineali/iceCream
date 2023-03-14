@@ -2,7 +2,7 @@ import { useUserSteps } from "~/store/store";
 
 const UserStep4 = () => {
     const {setStep}=useUserSteps()
-    return ( <div className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
+    return ( <div   className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
     <h1 className="text-3xl ">Result</h1>
               <p className={`text-lg  `}>View your options , if you do not like it you can shuffle to chanfe the combination.</p>
 

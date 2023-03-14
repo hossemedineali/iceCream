@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { useUserPreferances, useUserSteps } from "~/store/store";
 
+import {motion} from 'framer-motion'
 
 
 const categories=[8,12]
@@ -15,7 +15,7 @@ const UserStep2 = () => {
   }
 
 
-  return <div className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
+  return <div   className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
   <h1 className="text-3xl ">Select Size</h1>
             <p className={`text-lg  `}>Please select a size.</p>
 
