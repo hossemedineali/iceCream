@@ -13,21 +13,16 @@ const BarManStep1 = () => {
   });
 
     return ( <div className=" w-full h-full flex flex-col justify-evenly ">
-      <div className="h-60 border border-black max-h-[80vh] w-full ">
+      <div className="min-h-60 border border-black max-h-[80vh] w-full ">
 
      <video ref={ref}  className=''/> 
       </div>
 
-      {!decodedCode&&<div className=" h-12 text-2xl flex justify-center items-center">
-          <p className="">Please wait ,Scaning</p>
-        </div>}
-
-        {decodedCode&&<div className=" h-12 text-2xl flex justify-center items-center">
-          <p className="text-green">You can proceed</p>
-        </div>}
+     
       <div className="w-full px-4 py-4">
 
-<button  onClick={()=>setStep(2)} disabled={!decodedCode}  className="bg-white disabled:cursor-not-allowed border w-full border-gray-600 mt-5 h-12 max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out  text-black">Next</button>
+<button  onClick={()=>setStep(2)} disabled={!decodedCode}  className="bg-white disabled:cursor-not-allowed border w-full border-gray-600 mt-5 h-12 max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out  text-black">
+  {!decodedCode?'Please wait ,Scaning':'Next'}</button>
       </div>
 
     </div> );
