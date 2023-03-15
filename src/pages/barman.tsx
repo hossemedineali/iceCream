@@ -9,7 +9,7 @@ const BarMan = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" w-full h-screen">
-        <div className="w-full max-w-md h-full bg-slate-500 min-h-screen mx-auto md:border-2 border-zinc-200 px-4 pt-2 ">
+        <div className="w-full max-w-md h-full  min-h-screen mx-auto md:border-2 border-zinc-200 px-4 pt-2 ">
             
 
        <BarManWrapper/>
