@@ -1,4 +1,3 @@
-import QRCode from "react-qr-code";
 
 
 const BarManStep1 = () => {
