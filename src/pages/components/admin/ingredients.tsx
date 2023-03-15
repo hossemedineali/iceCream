@@ -1,3 +1,4 @@
+import { it } from "node:test";
 import { useAdmin } from "~/store/store";
 import TableRow from "./ingredientsTable";
 
@@ -20,7 +21,8 @@ const Ingredients = () => {
     for (let i = 1; i <= 20; i++) {
       const item = {
         id: i,
-        size: Math.floor(Math.random() * 10).toString() + " oz",
+        
+        size: Math.floor(Math.random() * 10).toLocaleString() + " oz",
         base: ["Non-Fat Yogurt", "Almond Milk", "Coconut Water"][
           Math.floor(Math.random() * 3)
         ],
@@ -37,9 +39,9 @@ const Ingredients = () => {
         extra: ["Honey", "Cinnamon", "Vanilla Extract"][
           Math.floor(Math.random() * 3)
         ],
-        calories: Math.floor(Math.random() * 200).toString() + " kcal",
-        proteins: Math.floor(Math.random() * 10).toString() + " g",
-        status: ["Active", "Non Active"][Math.floor(Math.random() * 2)],
+        calories: Math.floor(Math.random() * 200).toLocaleString() + " kcal",
+        proteins: Math.floor(Math.random() * 10).toLocaleString() + " g",
+        status: ["Available", "Sold Out"][Math.floor(Math.random() * 2)],
         category: categories[Math.floor(Math.random() * 4)],
       };
       data.push(item);
@@ -99,51 +101,45 @@ const Ingredients = () => {
                 })}
               </tr>
             </thead>
+
+
+            <tbody>
             {tableData.map(
               (
-                {
-                  id,
-                  Fruits,
-                  base,
-                  calories,
-                  category,
-                  dry,
-                  extra,
-                  proteins,
-                  size,
-                  status,
-                },
+               item,
                 index
               ) => {
                 return (
-                  <tr key={index} className="border-b bg-white border-gray-700 ">
+                  <tr className="border-b bg-white border-gray-700 ">
                     <th
                       scope="row"
-                      className="whitespace-nowrap py-1 px-2  font-medium text-gray-900 "
+                      className="whitespace-nowrap py-4 px-2  border-b text-gray-900 "
                     >
-                      {id}
+                      {item.id}
                     </th>
-                    <td className=" py-4 border">{size}</td>
-                    <td className=" py-4 border">{base}</td>
-                    <td className=" py-4 border">{Fruits}</td>
+                    <td className=" py-4 border">{'item.size'}</td>
+                    <td className=" py-4 border">{'item.base'}</td>
+                    <td className=" py-4 border">{'item.Fruits'}</td>
 
-                    <td className=" py-4 border">{dry}</td>
-                    <td className=" py-4 border">{extra}</td>
-                    <td className=" py-4 border">{calories}</td>
-                    <td className=" py-4 border">{proteins}</td>
+                    <td className=" py-4 border">{'item.dry'}</td>
+                    <td className=" py-4 border">{'item.extra'}</td>
+                    <td className=" py-4 border">{'item.calories'}</td>
+                    <td className=" py-4 border">{'item.proteins'}</td>
 
                     <td className=" py-4 border text-right">
                       <a
                         href="#"
-                        className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                        className={`font-medium  hover:underline  px-1 py-1 rounded-xl ${item.size=='Available'?'bg-green-600':'bg-green-600'}`}
                       >
-                        {status}
+                        {'item.status'}
                       </a>
                     </td>
                   </tr>
                 );
               }
             )}
+            </tbody>
+          
           </table>
         </div>
       </div>
