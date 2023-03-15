@@ -20,7 +20,7 @@ const Ingredients = () => {
     for (let i = 1; i <= 20; i++) {
       const item = {
         id: i,
-        size: Math.floor(Math.random() * 10) + " oz",
+        size: Math.floor(Math.random() * 10).toString() + " oz",
         base: ["Non-Fat Yogurt", "Almond Milk", "Coconut Water"][
           Math.floor(Math.random() * 3)
         ],
@@ -37,8 +37,8 @@ const Ingredients = () => {
         extra: ["Honey", "Cinnamon", "Vanilla Extract"][
           Math.floor(Math.random() * 3)
         ],
-        calories: Math.floor(Math.random() * 200) + " kcal",
-        proteins: Math.floor(Math.random() * 10) + " g",
+        calories: Math.floor(Math.random() * 200).toString() + " kcal",
+        proteins: Math.floor(Math.random() * 10).toString() + " g",
         status: ["Active", "Non Active"][Math.floor(Math.random() * 2)],
         category: categories[Math.floor(Math.random() * 4)],
       };
@@ -116,7 +116,7 @@ const Ingredients = () => {
                 index
               ) => {
                 return (
-                  <tr className="border-b bg-white border-gray-700 ">
+                  <tr key={index} className="border-b bg-white border-gray-700 ">
                     <th
                       scope="row"
                       className="whitespace-nowrap py-1 px-2  font-medium text-gray-900 "
