@@ -12,10 +12,10 @@ const BarManStep1 = () => {
     
   });
 
-    return ( <div className=" w-full h-full flex flex-col justify-evenly ">
-      <div className="min-h-60 border border-black max-h-[80vh] w-full ">
+    return ( <div className=" w-full h-full flex flex-col gap-10 ">
+      <div className="h-80  border-black max-h-72 w-full ">
 
-     <video ref={ref}  className=''/> 
+     <video ref={ref}  className='h-full w-full'/> 
       </div>
 
      
