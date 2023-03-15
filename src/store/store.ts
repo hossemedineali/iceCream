@@ -75,3 +75,19 @@ export const useBarMan=create<BarMan>()((set)=>({
   setScan:(x)=>set(()=>({scan:x})),
 
 }))
+
+
+
+interface Admin{
+  currentTab:string,
+  category:string,
+  setTab:(x:string)=>void,
+  setCategory:(x:string)=>void,
+}
+
+export const useAdmin=create<Admin>()((set)=>({
+  currentTab:'ingredients',
+  category:'Frozen Yogurt',
+  setTab:(x)=>set(()=>({currentTab:x})),
+  setCategory:(x)=>set(()=>({category:x})),
+}))
