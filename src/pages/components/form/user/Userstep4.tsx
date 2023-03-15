@@ -8,30 +8,17 @@ const UserStep4 = () => {
     const {setUrl}=useQrCode()
 
 
-   /*  const handelGenerate=async ()=>{
-      
-      try {
-        const url = await QRCode.toDataURL(
-          `Other - Wahnut + Dry - ce + Fruit - Apple,Orange`
-        );
-        setUrl(url);
-        setStep(5);
-      } catch (error) {
-        setQrCodeIsError(true);
-      }
-
-    
-    } */
+  
     const handelGenerate= ()=>{
       
-        QRCode.toDataURL(`Other - Wahnut + Dry - ce + Fruit - Apple,Orange`).then((res)=>{
+        QRCode.toDataURL(`Other - Wahnut + Dry - ce + Fruit - Apple,Orange,banana,peneaple`).then((res)=>{
           setUrl(res)
           setStep(5)
         }).catch(()=>{
           setQrCodeIsError(true)
         })
     } 
-    return ( <div   className=" gap-5 px-2 py-4 flex flex-col w-full h-screen">
+    return ( <div   className=" gap-5 px-2 py-4 flex flex-col w-full max-w-full b- h-screen">
     <h1 className="text-3xl ">Result</h1>
               <p className={`text-lg  `}>View your options , if you do not like it you can shuffle to chanfe the combination.</p>
 
@@ -49,7 +36,7 @@ const UserStep4 = () => {
 
               <div className="w-full h-auto flex text-2xl ">
                 <p className="font-bold  w-20">Fruit  </p>
-                <p className="ml-5 font-extralight">Apple,Orange</p>
+                <p className="ml-5 font-extralight  break-words">Apple,Orange,baznana,peneaple</p>
                 
               </div>
 

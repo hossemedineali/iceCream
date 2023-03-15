@@ -54,3 +54,19 @@ export const useQrCode=create<QrCode>()((set)=>({
   url:'',
   setUrl:(x)=>set(()=>({url:x}))
 }))
+
+
+
+interface BarMan{
+  step:number
+  decodedCode:string
+  setStep:(x:number)=>void
+  setDecodedCode:(x:string)=>void
+}
+
+export const useBarMan=create<BarMan>()((set)=>({
+  step:1,
+  decodedCode:'',
+  setStep:(x)=>set(()=>({step:x})),
+  setDecodedCode:(x)=>set(()=>({decodedCode:x})),
+}))
