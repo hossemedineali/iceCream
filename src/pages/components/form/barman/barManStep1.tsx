@@ -12,7 +12,7 @@ const BarManStep1 = () => {
     
   });
 
-    return ( <div className=" w-full h-full flex flex-col gap-5 ">
+    return ( <div className=" w-full h-full flex flex-col justify-evenly ">
       <div className="h-60 border border-black max-h-[80vh] w-full ">
 
      <video ref={ref}  className=''/> 

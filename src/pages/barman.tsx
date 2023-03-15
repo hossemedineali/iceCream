@@ -17,8 +17,8 @@ const BarMan = () => {
 
        <BarManWrapper/>
         </div>}
-        {!scan&&<div className="my-auto flex">
-        <button  onClick={()=>setScan(true)}  className=" bg-white w-full max-w-md h-12  mx-4 md:border-2  px-4 pt-2  border border-gray-600 mt-5  max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed text-black">Scan</button>
+        {!scan&&<div className="my-auto  flex">
+        <button  onClick={()=>setScan(true)}  className="mx-auto bg-white w-full max-w-md h-12   md:border-2  px-4 pt-2  border border-gray-600 mt-5  max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed text-black">Scan</button>
 
         </div>}
       </main>
