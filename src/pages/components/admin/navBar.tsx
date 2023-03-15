@@ -1,16 +1,16 @@
 
 const  NavBar=()=>{
-    return <div className="flex w-64 flex-col gap-5 bg-white pt-5 pl-2">
-    <h2 className="text-3xl">Menu</h2>
+    return <div className="flex w-48 flex-col gap-5 bg-white pt-5 pl-2">
+    <h2 className="text-2xl">Menu</h2>
     <div className="flex w-full flex-col gap-3 px-3 pl-5 transition-all ease-in-out duration-100">
-      <div className="flex gap-3 rounded-lg bg-slate-400 py-2 px-2 text-2xl hover:cursor-pointer hover:border hover:bg-white hover:text-slate-800">
+      <div className="border-white border flex items-center gap-3 rounded-lg bg-slate-400 py-1 px-2  hover:cursor-pointer hover:border-slate-800 hover:border  hover:bg-white hover:text-slate-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-8 w-8"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
@@ -21,14 +21,14 @@ const  NavBar=()=>{
         <p>Ingredients</p>
       </div>
 
-      <div className="flex gap-3 rounded-lg bg-slate-400 py-2 px-2 text-2xl hover:cursor-pointer hover:border hover:bg-white hover:text-slate-800">
+      <div className="border-white border flex items-center gap-3 rounded-lg bg-slate-400 py-1 px-2  hover:cursor-pointer hover:border-slate-800 hover:bg-white hover:text-slate-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-8 w-8"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
@@ -40,14 +40,14 @@ const  NavBar=()=>{
         <p>Orders</p>
       </div>
 
-      <div className="flex gap-3 rounded-lg bg-slate-400 py-2 px-2 text-2xl hover:cursor-pointer hover:border hover:bg-white hover:text-slate-800">
+      <div className="border-white border flex items-center gap-3 rounded-lg bg-slate-400 py-1 px-2  hover:cursor-pointer hover:border-slate-800 hover:bg-white hover:text-slate-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-8 w-8"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
@@ -59,14 +59,14 @@ const  NavBar=()=>{
         <p>Users</p>
       </div>
 
-      <div className="flex gap-3 rounded-lg bg-slate-400 py-2 px-2 text-2xl hover:cursor-pointer hover:border hover:bg-white hover:text-slate-800">
+      <div className="border-white border flex items-center gap-3 rounded-lg bg-slate-400 py-1 px-2  hover:cursor-pointer hover:border-slate-800 hover:bg-white hover:text-slate-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-8 w-8"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"

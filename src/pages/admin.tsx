@@ -27,6 +27,8 @@ const Admin = () => {
         <div className="flex-grow ">
                {currentTab=='ingredients'&& <Ingredients/>}
         </div>
+
+        
       </div>
     </div>
   );
