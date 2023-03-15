@@ -18,38 +18,40 @@ const UserStep4 = () => {
           setQrCodeIsError(true)
         })
     } 
-    return ( <div   className=" gap-5 px-2 py-4  text-xl flex flex-col w-full max-w-full b- h-screen">
+    return ( <div   className=" gap-5 px-2 py-4  text-2xl flex flex-col w-full max-w-full b- h-screen">
     <h1 className="text-3xl ">Result</h1>
               <p className={`text-lg  `}>View your options , if you do not like it you can shuffle to chanfe the combination.</p>
 
+              
               <div className="w-full h-auto flex  ">
-                <p className="font-bold  w-20">Other  </p>
-                <p className="ml-5 font-extralight">Wahnut</p>
+                <p className=" w-1/3 font-bold  ">Other  </p>
+                <p className="ml-5 font-extralight w-2/3">Wahnut</p>
                 
               </div>
 
               <div className="w-full h-auto flex  ">
-                <p className="font-bold  w-20">Dry  </p>
-                <p className="ml-5 font-extralight">Ce</p>
+                <p className=" w-1/3 font-bold  ">Dry  </p>
+                <p className="ml-5 font-extralight w-2/3">Ce</p>
                 
               </div>
 
               <div className="w-full h-auto flex  ">
-                <p className="font-bold  w-20">Fruit  </p>
-                <p className="ml-5 font-extralight  break-word flex flex-wrap">Apple, ,Apple, Orange, Apple, Orange,</p>
+                <p className=" w-1/3 font-bold  ">Fruit  </p>
+                <p className="ml-5 font-extralight w-2/3  break-word flex flex-wrap">Apple, ,Apple, Orange, Apple, Orange,</p>
                 
               </div>
 
               <div className="w-full h-auto flex  ">
-                <p className="font-bold  w-20">Base  </p>
-                <p className="ml-5 font-extralight">Milk</p>
+                <p className=" w-1/3 font-bold  ">Base  </p>
+                <p className="ml-5 font-extralight w-2/3">Milk</p>
                 
-              </div>
+              </div> 
 
 
 
 
-                <button    className=" h-12 mt-5 max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed border rounded-md border-black text-black">Shuffle</button>
+                <button    className="  h-12 mt-5 max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed border rounded-md border-black text-black">Shuffle</button>
+                <div className="flex-grow"></div>
                 {qrCodeIsError&&<p className="text-md text-indigo-600 px-10 text-center">Sorry... something went wrong ! please try again in a second</p>}
               <button  onClick={()=>{handelGenerate()}}   className=" h-12  max-w-96 text-2xl hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out disabled:cursor-not-allowed border rounded-md bg-black text-white mt-auto mb-4">Generate Order</button>
 
