@@ -10,6 +10,7 @@ import Ingredients from "./components/admin/ingredients";
 import NavBar from "./components/admin/navBar";
 
 const Admin = () => {
+    const {currentTab}=useAdmin()
   if (isMobile) {
     return (
       <div className=" flex  h-screen flex-col justify-center px-2 text-2xl">
@@ -18,7 +19,6 @@ const Admin = () => {
       </div>
     );
   }
-const {currentTab}=useAdmin()
   return (
     <div className="flex h-auto min-h-screen w-full flex-col bg-slate-300">
       <Header />
