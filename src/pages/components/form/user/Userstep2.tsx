@@ -16,7 +16,7 @@ const UserStep2 = () => {
   }
 
   
-  return     <div   className=" gap-5 overflow-hidden px-2 py-4 flex flex-col w-full h-screen">
+  return     <div   className=" gap-5  px-2 py-4 pb-4 flex flex-col w-full h-screen">
   <h1 className="text-3xl ">Select Category</h1>
             <p className={`text-lg  `}>Please select a category.</p>
 
