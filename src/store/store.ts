@@ -60,13 +60,18 @@ export const useQrCode=create<QrCode>()((set)=>({
 interface BarMan{
   step:number
   decodedCode:string
+  scan:boolean
   setStep:(x:number)=>void
   setDecodedCode:(x:string)=>void
+  setScan:(x:boolean)=>void
 }
 
 export const useBarMan=create<BarMan>()((set)=>({
   step:1,
   decodedCode:'',
+  scan:false,
   setStep:(x)=>set(()=>({step:x})),
   setDecodedCode:(x)=>set(()=>({decodedCode:x})),
+  setScan:(x)=>set(()=>({scan:x})),
+
 }))
